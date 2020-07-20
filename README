@@ -52,3 +52,13 @@ http://sqladmin.sf.net
 --
 Franco Catrin L.
 http://www.tuxpan.com/fcatrin
+
+Linux:
+Please note that the Standard Widget Toolkit for Linux platforms needs the GTK2 Toolkit. Make sure that GTK2 is installed on your Linux System, then download the SWT binaries for Linux from the JControl Download Section.
+
+Installation procedure:
+
+ unpack the archive: swt-*-linux-gtk.zip
+ copy libswt*.so to %JAVA_HOME%/jre/lib/i386,
+(%JAVA_HOME% is the folder where JRE is installed on your system; e.g. /usr/local/j2sdk1.4.1_01),
+ copy swt.jar to %JAVA_HOME%/jre/lib/ext

@@ -7,11 +7,16 @@ import org.eclipse.swt.*;
 import org.eclipse.swt.widgets.*;
 import org.eclipse.swt.graphics.*;
 
+import java.io.InputStream;
 import java.util.*;
 
 public class GUIUtil {
 	public static Image getIcon(String name){
-		return new Image(SqlAdmin.display, SqlAdmin.class.getResourceAsStream("images/" + name));
+		InputStream resourceAsStream = SqlAdmin.class.getResourceAsStream("images/" + name);
+		if(resourceAsStream != null){
+			return new Image(SqlAdmin.display, resourceAsStream);
+		}
+		return null;
 	}
 	
 	public static boolean query(String text){
